@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800&display=swap');
+
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0px;
+  padding: 0;
+  font-size: 1rem;
+  box-sizing: border-box;
+  color: #E4E5EA;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 1rem;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+$maxWidthContainer : 1270;
+$md1: $maxWidthContainer + 12;
+$md2: 991.98;
+$md3: 767.98;
+$md4: 479.98;
+
+
+/* PC  */
+@media (max-width: #{$md1 + px }) {}
+
+/* TABLET  */
+@media (max-width: #{$md2 + px }) {}
+
+/* MOBILE */
+@media (max-width: #{$md3 + px }) {}
+
+
+
+/*///////////////////////////*/
+#root {
+  min-height: 100%;
+}
+
+.wrapper {
+  overflow: hidden;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: url('./Components/images/Desktop.png') center center/cover no-repeat;
+}
+
+// .swiper-wrapper.swiper-slide,
+// .swiper-slide {
+//   width: 60%;
+// }
+
+.header {
+  // position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 50;
+  // min-height: 100vh;
+
+  &__title {
+    // background: linear-gradient(180deg, rgba(121, 121, 121, 0.4) 20.25%, #2d7995 69.58%);
+
+
+  }
+}
+
+.main {
+  flex: 1 1 auto;
+}
+
+.header__wrapper {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 30;
+
+
+  padding-top: 2.875rem;
+  min-height: 4.5625rem;
+
+  @media (max-width: #{$md3 + px }) {
+    padding-top: 0;
+    min-height: 3.4375rem;
+    background: #000;
+  }
+}
+
+/*///////////////////////////*/
+.header__logo {
+  @media (max-width: #{$md3 + px }) {
+    display: none;
+  }
+}
+
+.menu {
+  & ul {
+    @media (max-width: #{$md3 + px }) {
+      column-gap: 0;
+      justify-content: space-around;
+    }
+  }
+
+  & .last_li_hidden {
+    @media (max-width: #{$md3 + px }) {
+      display: none;
+    }
+  }
+
+  &>ul>li>a {
+    @media (max-width: #{$md3 + px }) {
+      font-size: .75rem;
+
+    }
+  }
+
+  // @media (max-width: #{$md3 + px }) {
+  //   overflow: hidden;
+  //   position: fixed;
+  //   left: -100%;
+  //   width: 100%;
+  //   height: 100%;
+  //   transition: all 0.6s ease-in-out;
+  //   display: flex;
+  //   top: 0;
+  //   align-items: center;
+  //   background: #375b68;
+
+  //   &.active {
+  //     left: 0;
+  //   }
+  // }
+}
+
+.header__content {
+  @media (max-width: #{$md3 + px }) {
+    overflow: hidden;
+    // position: fixed;
+    // left: -100%;
+    // width: 100%;
+    // height: 100%;
+    width: 0;
+    display: none;
+    // transition: all 0.6s ease-in-out;
+    // display: flex;
+    // top: 0;
+    // align-items: center;
+    // background: #375b68;
+    visibility: hidden;
+
+    &.active {
+      left: 0;
+    }
+  }
+}
+
+.line {
+  background: linear-gradient(90deg, #FCB045 36.99%, #FD1D1D 100%);
+}
+
+.header__title {
+  @media (max-width: #{$md3 + px }) {
+    font-size: 36px;
+  }
+
+  & span {
+    background: -webkit-linear-gradient(92deg, #FCB045 27.14%, #FF3F78 121.36%);
+    font-weight: 900;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+  }
+}
+
+.about__title {
+  color: var(--light-text, #E4E5EA);
+  font-family: 'Inter';
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 22px;
+
+  & span {
+    background: var(--gradient, linear-gradient(90deg, #FCB045 36.99%, #FD1D1D 100%));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Inter';
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.9px;
+    text-transform: uppercase;
+  }
+}
+
+.container {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+._scroll {
+
+  .header__wrapper {
+    background: #ffffff;
+    transition: all 0.5s ease 0s;
+  }
+
+  .header__container {
+    min-height: 70px;
+  }
+}
+
+.footer__label {
+  color: var(--light-text, #E4E5EA);
+  font-family: 'Inter';
+  font-size: 16px;
+  font-weight: 400;
+  text-align: left;
+}
+
+footer {
+  @media (max-width: #{$md3 + px }) {
+    background: #000;
+  }
+}
